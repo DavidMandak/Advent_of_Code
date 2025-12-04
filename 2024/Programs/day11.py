@@ -1,7 +1,10 @@
 from collections import defaultdict
+import time
+
 line = open("2024/Inputs/input11.txt").read().split()
 save = line.copy()
 
+t = time.time()
 total = len(line)
 for _ in range(25):
     for i in range(len(line)):
@@ -34,3 +37,4 @@ for parent in line:
             else:
                 next[str(int(stone)*2024)] += stones[stone]
 print(total)
+print(time.time()-t)

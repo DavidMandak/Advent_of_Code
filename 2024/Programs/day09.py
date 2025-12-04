@@ -1,3 +1,5 @@
+import time
+
 line = open("2024/Inputs/input09.txt").read().splitlines()[0]
 
 line = list(map(int, line))
@@ -57,3 +59,4 @@ while front < len(line):
         back -= 2
     front += 1
 print(total)
+print(time.time()-t)

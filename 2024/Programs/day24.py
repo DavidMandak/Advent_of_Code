@@ -1,3 +1,5 @@
+import time
+
 values, lines = open("2024/Inputs/input24.txt").read().split("\n\n")
 lines = [line.split() for line in lines.splitlines()]
 wires = {name:int(value) for name, value in [(start.split(": ")) for start in values.splitlines()]}
@@ -26,6 +28,7 @@ def check(wires, lines):
     return int(str(list(reversed(total)))[1:-1].replace(", ", ""), 2)
 
 
+t = time.time()
 print(check(wires.copy(), lines.copy()))
 swap = []
 for line in lines:
@@ -58,3 +61,4 @@ for i in list(map(str, range(1, 45))):
                     swap.append(out)
 swap.sort()
 print(str(swap)[1:-1].replace("\'", "").replace(" ", ""))
+print(time.time()-t)

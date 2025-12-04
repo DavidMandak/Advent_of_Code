@@ -1,5 +1,9 @@
 import re, math
+import time
+
 lines = open("2023/Inputs/input08.txt").read().splitlines()
+
+t = time.time()
 instructions = lines[0]
 nodes = {}
 for i in range(2, len(lines)):
@@ -35,3 +39,4 @@ for pos in starts:
     while loop(pos):
         pos = x
 print(math.lcm(ends[0], ends[1], ends[2], ends[3], ends[4], ends[5]))
+print(time.time()-t)

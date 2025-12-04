@@ -1,4 +1,7 @@
 from collections import defaultdict
+import time
+
+
 lines = open("2024/Inputs/input05.txt").read().split("\n\n")
 
 rules = defaultdict(list)
@@ -41,3 +44,4 @@ for update in updates:
         k = 1
     total += k*line[len(line)//2]
 print(total)
+print(time.time()-t)

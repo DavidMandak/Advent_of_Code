@@ -1,4 +1,6 @@
 import copy
+import time
+
 lines = open("2024/Inputs/input10.txt").read().splitlines()
 
 
@@ -18,6 +20,7 @@ def trail(x, y):
             dx = temp
 
 
+t = time.time()
 total = 0
 for y in range(len(lines)):
     lines[y] = list(map(int, lines[y]))
@@ -27,3 +30,4 @@ for y in range(len(lines)):
             save = copy.deepcopy(lines)
             trail(x, y)
 print(total)
+print(time.time()-t)

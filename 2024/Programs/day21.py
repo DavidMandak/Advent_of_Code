@@ -1,3 +1,5 @@
+import time
+
 lines = open("2024/Inputs/input21.txt").read().splitlines()
 pad = {
     "7":(0, 0), "8":(1, 0), "9":(2, 0),
@@ -8,6 +10,7 @@ pad = {
     "-1,0":(0, 1), "0,1":(1, 1), "1,0":(2, 1)
 }
 
+t = time.time()
 total = 0
 segments = []
 for line in lines:
@@ -84,3 +87,4 @@ for i in range(len(lines)):
         seg_sum += move(s, 25)
     total += seg_sum*int(lines[i][:-1])
 print(total)
+print(time.time()-t)

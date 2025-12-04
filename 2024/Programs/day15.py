@@ -1,9 +1,12 @@
 import copy
+import time
+
 warehouse, moves = open("2024/Inputs/input15.txt").read().split("\n\n")
 warehouse = list(map(list, warehouse.splitlines()))
 save = copy.deepcopy(warehouse)
 moves = moves.replace("\n", "")
 
+t = time.time()
 start_x, start_y = 24, 24
 warehouse[start_y][start_x] = "."
 for move in moves:
@@ -122,3 +125,4 @@ for y in range(1, len(warehouse)-1):
         if warehouse[y][x] == "[":
             total += 100*y+x
 print(total)
+print(time.time()-t)

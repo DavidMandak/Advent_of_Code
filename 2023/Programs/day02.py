@@ -1,5 +1,9 @@
 import re
+import time
+
 lines = open("2023/Inputs/input02.txt").read().splitlines()
+
+t = time.time()
 total = 0
 for line in lines:
     red = 0
@@ -18,3 +22,4 @@ for line in lines:
             blue = number
     total += red*green*blue
 print(total)
+print(time.time()-t)

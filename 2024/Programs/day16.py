@@ -1,4 +1,5 @@
 import sys, copy
+import time
 
 sys.setrecursionlimit(10**6)
 lines = list(map(list, open("2024/Inputs/input16.txt").read().splitlines()))
@@ -20,7 +21,7 @@ def move(x, y, dx, dy, maze, score):
             move(x+kx, y+ky, kx, ky,  maze, score+1001)
 
 
-
+t = time.time()
 total = None
 move(1, len(lines)-2, 1, 0, lines, 0)
 print(total)
@@ -55,3 +56,4 @@ for road in roads:
         if pos not in positions:
             positions.append(pos)
 print(len(positions))
+print(time.time()-t)

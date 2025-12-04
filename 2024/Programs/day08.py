@@ -1,4 +1,6 @@
 from collections import defaultdict
+import time
+
 lines = open("2024/Inputs/input08.txt").read().splitlines()
 save = lines.copy()
 
@@ -48,3 +50,4 @@ for antenna in antennas:
                     total += 1
                 k += 1
 print(total)
+print(time.time()-t)

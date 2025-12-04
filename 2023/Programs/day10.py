@@ -1,3 +1,5 @@
+import time
+
 lines = open("2023/Inputs/input10.txt").read().splitlines()
 positions = [[114, 36], [115, 35]]
 moves = ["R", "D"]
@@ -28,6 +30,7 @@ def down(i):
     positions[i][0] += 1
 
 
+t = time.time()
 steps = 1
 while positions[0] != positions[1]:
     for i in range(0, 2):
@@ -137,3 +140,4 @@ for line in lines_list:
         if character == ".":
             total += 1
 print(total)
+print(time.time()-t)

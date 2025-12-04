@@ -1,3 +1,5 @@
+import time
+
 start, end = tuple(map(int, open("2019/Inputs/input04.txt").read()[:-1].split("-")))
 
 
@@ -35,6 +37,7 @@ def create_no_groups(num, prev, rank):
             create_no_groups(num+numeral*10**rank, numeral, rank-1)
 
 
+t = time.time()
 total = 0
 done = []
 for n in range(2, 7):
@@ -45,3 +48,4 @@ done = []
 for n in range(2, 7):
     create_no_groups(n*10**4, n, 3)
 print(total)
+print(time.time()-t)

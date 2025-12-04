@@ -1,4 +1,7 @@
 import Intcode
+import time
+
+t = time.time()
 program = list(map(int, open("2019/Inputs/input02.txt").read()[:-1].split(",")))
 program[1], program[2] = 12, 2
 save = program[:]
@@ -13,3 +16,4 @@ for noun in range(99):
         if program[0] == 19690720:
             print(100*noun+verb)
             exit()
+print(time.time()-t)

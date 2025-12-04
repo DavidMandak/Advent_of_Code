@@ -1,3 +1,5 @@
+import time
+
 registers, program = open("2024/Inputs/input17.txt").read().split("\n\n")
 registers = registers.splitlines()
 for i in range(3):
@@ -39,6 +41,7 @@ def out(operand):
     output += str(combo_operand % 8)+","
 
 
+t = time.time()
 output = ""
 pos = 0
 while pos < len(program):
@@ -88,3 +91,4 @@ while output[:-1] != check:
         continue
     a += 1
 print(int(oct(a)[:-1], 8))
+print(time.time()-t)

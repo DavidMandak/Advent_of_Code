@@ -1,4 +1,8 @@
+import time
+
 lines = open("2023/Inputs/input01.txt").read().splitlines()
+
+t = time.time()
 first = None
 last = None
 final = 0
@@ -68,3 +72,4 @@ for line in lines:
     last = None
     x += 1
 print(final)
+print(time.time()-t)

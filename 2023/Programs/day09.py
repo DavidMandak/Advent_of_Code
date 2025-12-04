@@ -1,4 +1,8 @@
+import time
+
 lines = open("2023/Inputs/input09.txt").read().splitlines()
+
+t = time.time()
 total = 0
 for i in range(0, len(lines)):
     lines[i] = lines[i].split(" ")
@@ -25,3 +29,4 @@ for line in lines:
         sequences[-i-1].insert(0, sequences[-i-1][0]-sequences[-i][0])
     total += sequences[0][0]
 print(total)
+print(time.time()-t)

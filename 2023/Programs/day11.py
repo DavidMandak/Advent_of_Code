@@ -1,4 +1,8 @@
+import time
+
 lines = open("2023/Inputs/input11.txt").read().splitlines()
+
+t = time.time()
 galaxies = []
 y_empty = []
 empty_line = 30
@@ -48,3 +52,4 @@ for galaxy in galaxies:
                 total += 999999
     i += 1
 print(total)
+print(time.time()-t)

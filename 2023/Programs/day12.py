@@ -1,4 +1,8 @@
+import time
+
 lines = open("2023/Inputs/input12.txt").read().splitlines()
+
+t = time.time()
 springs = []
 records = []
 total = 0
@@ -91,3 +95,4 @@ for i in range(0, len(lines)):
     generate(-1, 0, springs[i], records[i], 0, None, False)
     break
 print(total)
+print(time.time()-t)

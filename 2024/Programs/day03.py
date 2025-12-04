@@ -1,5 +1,8 @@
+import time
+
 lines = open("2024/Inputs/input03.txt").read().splitlines()
 
+t = time.time()
 total = 0
 for line in lines:
     i = 0
@@ -52,3 +55,4 @@ for line in lines:
             total += int(a)*int(b)
         i += 1
 print(total)
+print(time.time()-t)

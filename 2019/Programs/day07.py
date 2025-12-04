@@ -1,4 +1,5 @@
 import Intcode
+import time
 
 program = list(map(int, open("../Inputs/test.txt").read()[:-1].split(",")))
 
@@ -11,6 +12,7 @@ def find_1(phases, inp):
         find_1(phases[:i]+phases[i+1:], Intcode.run(program[:], [phases[i], inp]))
 
 
+t = time.time()
 total = 0
 find_1(list(range(5)), 0)
 print(total)
@@ -41,3 +43,4 @@ def find_2(phases, inputs):
 total = 0
 find_2(list(range(5, 10)), [])
 print(total)
+print(time.time()-t)

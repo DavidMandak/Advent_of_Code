@@ -1,3 +1,5 @@
+import time
+
 lines = open("2024/Inputs/input12.txt").read().splitlines()
 save = lines.copy()
 
@@ -22,6 +24,7 @@ def f(crop, x, y):
         dx = temp
 
 
+t = time.time()
 total = 0
 for y in range(len(lines)):
     for x in range(len(lines[y])):
@@ -71,3 +74,4 @@ for y in range(len(lines)):
             g(lines[y][x], x, y)
             total += area*corners
 print(total)
+print(time.time()-t)

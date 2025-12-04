@@ -1,5 +1,8 @@
+import time
+
 problems = open("2024/Inputs/input13.txt").read().split("\n\n")
 
+t = time.time()
 total = 0
 for problem in problems:
     temp = []
@@ -17,3 +20,4 @@ for problem in problems:
         if result_A.is_integer():
             total += int(3*result_A+result_B)
 print(total)
+print(time.time()-t)

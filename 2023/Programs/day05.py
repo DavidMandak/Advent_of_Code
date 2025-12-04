@@ -1,6 +1,10 @@
+import time
+
 lines = open("2023/Inputs/input05.txt").read().split("\n\n")
 lines[0] = lines[0].split(" ")
 lines[0].pop(0)
+
+t = time.time()
 seeds = []
 seeds_change = []
 for i in range(0, len(lines[0]), 2):
@@ -80,3 +84,4 @@ for seed in seeds_change:
     if seed[0] < low:
         low = seed[0]
 print(low)
+print(time.time()-t)

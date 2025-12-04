@@ -1,5 +1,8 @@
+import time
+
 lines = list(map(int, open("2019/Inputs/input01.txt").read().splitlines()))
 
+t = time.time()
 total = 0
 for mass in lines:
     total += mass//3-2
@@ -14,3 +17,4 @@ for mass in lines:
         mass = fuel
     total -= fuel
 print(total)
+print(time.time()-t)

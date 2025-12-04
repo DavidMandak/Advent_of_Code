@@ -1,6 +1,9 @@
 from collections import defaultdict
+import time
+
 lines = open("2024/Inputs/input23.txt").read().splitlines()
 
+t = time.time()
 total = 0
 neighbours = defaultdict(list)
 for pair in lines:
@@ -26,3 +29,4 @@ for code in codes:
         party.append(code)
 party.sort()
 print(str(party)[2:-2].replace("\'", "").replace(" ", ""))
+print(time.time()-t)

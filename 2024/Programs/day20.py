@@ -1,4 +1,6 @@
 import sys, copy
+import time
+
 lines = open("2024/Inputs/input20.txt").read()
 sys.setrecursionlimit(10**6)
 
@@ -71,6 +73,7 @@ def cheat_20ps(px, py):
             kx = temp
 
 
+t = time.time()
 total = 0
 memo = copy.deepcopy(lines)
 memoization(start, (-1, -1), 0)
@@ -82,3 +85,4 @@ for y in range(len(lines)):
         if lines[y][x] == ".":
             cheat_20ps(x, y)
 print(total)
+print(time.time()-t)

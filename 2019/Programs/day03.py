@@ -1,6 +1,9 @@
+import time
+
 first, second = [wire.split(",") for wire in open("2019/Inputs/input03.txt").read().replace("R", "1 0 ")
 .replace("L", "-1 0 ").replace("U", "0 -1 ").replace("D", "0 1 ").splitlines()]
 
+t = time.time()
 step_total, man_total = None, None
 x, y = 0, 0
 steps = 0
@@ -43,3 +46,4 @@ for line in second:
         y += dy*distance
     steps += distance
 print(f"{man_total}\n{step_total}")
+print(time.time()-t)

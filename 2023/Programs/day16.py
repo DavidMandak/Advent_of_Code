@@ -1,4 +1,8 @@
+import time
+
 lines = open("2023/Inputs/input16.txt").read().splitlines()
+
+t = time.time()
 energy_map = []
 total = 0
 most = 0
@@ -85,3 +89,4 @@ for y, d in (0, "D"), (len(lines)-1, "U"):
         total = 0
         energy_map = backup.copy()
 print(most)
+print(time.time()-t)

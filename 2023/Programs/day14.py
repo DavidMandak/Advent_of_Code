@@ -1,3 +1,5 @@
+import time
+
 lines = open("2023/Inputs/input14.txt").read().splitlines()
 vertical_length = len(lines)
 horizontal_length = len(lines[0])
@@ -73,6 +75,7 @@ def east():
                     east_total += horizontal_length
 
 
+t = time.time()
 i = 1
 while True:
     total = 0
@@ -89,3 +92,4 @@ while True:
     i += 1
 num = totals.index((total, east_total)) + 1
 print(totals[num+((1000000000-num) % (i-num))-1][0])
+print(time.time()-t)

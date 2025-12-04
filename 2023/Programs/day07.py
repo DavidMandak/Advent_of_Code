@@ -1,3 +1,5 @@
+import time
+
 lines = open("2023/Inputs/input07.txt").read().splitlines()
 quintuplet_hand, quintuplet_bid = [], []
 quadruplet_hand, quadruplet_bid = [], []
@@ -6,6 +8,8 @@ triplet_hand, triplet_bid = [], []
 two_pair_hand, two_pair_bid = [], []
 pair_hand, pair_bid = [], []
 high_hand, high_bid = [], []
+
+t = time.time()
 total = 0
 for line in lines:
     hand = line.split(" ")[0]
@@ -108,3 +112,4 @@ for bids in high_bid, pair_bid, two_pair_bid, triplet_bid, full_house_bid, quadr
         total += bid*rank
         rank += 1
 print(total)
+print(time.time()-t)

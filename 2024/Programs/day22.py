@@ -1,6 +1,9 @@
 from collections import  defaultdict
+import time
+
 lines = list(map(int, open("2024/Inputs/input22.txt").read().splitlines()))
 
+t = time.time()
 total = 0
 count = 0
 highs = defaultdict(int)
@@ -27,3 +30,4 @@ for high in highs:
     if highs[high] > most:
         most = highs[high]
 print(most)
+print(time.time()-t)

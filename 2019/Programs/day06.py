@@ -1,6 +1,9 @@
 from collections import defaultdict
+import time
+
 lines = [orbit.split(")") for orbit in open("2019/Inputs/input06.txt").read().splitlines()]
 
+t = time.time()
 total = 0
 orbits = defaultdict(list)
 for orbit in lines:
@@ -38,3 +41,4 @@ def find_min(obj, dist):
 
 you, san = 0, 0
 print(list(find_min("COM", 0)))
+print(time.time()-t)

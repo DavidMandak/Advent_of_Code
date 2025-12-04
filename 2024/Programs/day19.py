@@ -1,4 +1,5 @@
 from collections import defaultdict
+import time
 
 towels, designs = open("2024/Inputs/input19.txt").read().split("\n\n")
 towels = towels.split(", ")
@@ -25,6 +26,7 @@ def find_back(pattern):
     return False
 
 
+t = time.time()
 total = 0
 for design in designs.splitlines():
     if find_front(design):
@@ -66,3 +68,4 @@ memo = defaultdict(int)
 for design in designs.splitlines():
     total += front(design)
 print(total)
+print(time.time()-t)

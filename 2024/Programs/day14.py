@@ -1,8 +1,10 @@
 import copy
 from PIL import Image
+import time
 
 lines = open("2024/Inputs/input14.txt").read().splitlines()
 
+t = time.time()
 total = 1
 map_size = (101, 103)
 time = 100
@@ -35,3 +37,4 @@ for time in range(52, 10**4, 101):
     output = Image.new("L", (map_size[0], map_size[1]))
     output.putdata(graph)
     output.save("Advent_of_Code_14_images/AoC_"+str(time)+".jpg")
+print(time.time()-t)

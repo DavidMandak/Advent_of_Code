@@ -1,4 +1,8 @@
+import time
+
 strings = open("2023/Inputs/input15.txt").read().split(",")
+
+t = time.time()
 boxes = {}
 total = 0
 current = 0
@@ -21,3 +25,4 @@ for box in boxes:
         total += (box+1)*i*int(boxes[box][label])
         i += 1
 print(total)
+print(time.time()-t)

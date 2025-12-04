@@ -1,4 +1,6 @@
 from collections import defaultdict
+import time
+
 lines = open("2024/Inputs/input06.txt").read()
 
 start_pos = lines.index("^")
@@ -51,3 +53,4 @@ for a in range(len(lines)):
                 y += direction[1]
             save[a] = save[a][:b]+"."+save[a][b+1:]
 print(total)
+print(time.time()-t)

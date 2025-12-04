@@ -1,4 +1,8 @@
+import time
+
 lines = open("2023/Inputs/input06.txt").read().splitlines()
+
+t = time.time()
 races = []
 total = 1
 time = int(lines[0])
@@ -10,3 +14,4 @@ for ms in range(1, (time//2)+1):
         print(time-(2*ms)+1)
         break
 print(total)
+print(time.time()-t)

@@ -1,5 +1,9 @@
+import time
+
 lines = open("2023/Inputs/input17.txt").read().splitlines()
 lines1 = open("../test.txt").read().splitlines()
+
+t = time.time()
 values = []
 huh = []
 for y in range(0, len(lines)):
@@ -73,3 +77,4 @@ for line in huh:
     print()
 print()
 print(values)
+print(time.time()-t)

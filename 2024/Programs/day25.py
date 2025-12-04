@@ -1,3 +1,5 @@
+import time
+
 schematics = open("2024/Inputs/input25.txt").read().split("\n\n")
 
 def read(sch, char):
@@ -10,6 +12,7 @@ def read(sch, char):
     return heights
 
 
+t = time.time()
 total = 0
 keys = []
 locks = []
@@ -27,4 +30,4 @@ for lock in locks:
                 break
         total += 1
 print(total)
-
+print(time.time()-t)

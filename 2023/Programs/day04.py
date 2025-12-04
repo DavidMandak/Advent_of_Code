@@ -1,5 +1,9 @@
 import re
+import time
+
 lines = open("2023/Inputs/input04.txt").read().splitlines()
+
+t = time.time()
 points = 0
 total = 0
 index = 0
@@ -27,3 +31,4 @@ for line in lines:
     points = 0
 print(dict)
 print(total+197)
+print(time.time()-t)

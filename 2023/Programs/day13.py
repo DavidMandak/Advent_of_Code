@@ -1,6 +1,6 @@
+import time
+
 patterns = open("2023/Inputs/input13.txt").read().split("\n\n")
-vertical = 0
-horizontal = 0
 
 
 def search(grid, axis):
@@ -57,6 +57,9 @@ def check(i, size, grid, axis, count):
         return False
 
 
+t = time.time()
+vertical = 0
+horizontal = 0
 for pattern in patterns:
     pattern = pattern.splitlines()
     if search(pattern, "x") is not True:
@@ -68,3 +71,4 @@ for pattern in patterns:
             columns.append(column)
         search(columns, "y")
 print(vertical+100*horizontal)
+print(time.time()-t)

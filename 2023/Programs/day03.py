@@ -1,4 +1,8 @@
+import time
+
 lines = open("2023/Inputs/input03.txt").read().splitlines()
+
+t = time.time()
 check = False
 number = ""
 first_index = None
@@ -51,3 +55,4 @@ for gear in gears:
         total += gears[gear][0]*gears[gear][1]
 print(gears)
 print(total)
+print(time.time()-t)

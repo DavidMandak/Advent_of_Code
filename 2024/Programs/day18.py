@@ -1,7 +1,10 @@
 import sys, copy
+import time
+
 lines = open("2024/Inputs/input18.txt").read().splitlines()
 sys.setrecursionlimit(10**6)
 
+t = time.time()
 size = 71
 amount = 2000 # Change this to 1024 for the first part, my code for the second part is not very optimal, so I just started at 2000
 grid = []
@@ -68,3 +71,4 @@ while goal is not None:
         step(0, 0, 0, "")
     byte += 1
 print(lines[byte-1])
+print(time.time()-t)

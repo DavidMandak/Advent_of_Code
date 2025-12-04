@@ -1,3 +1,5 @@
+import time
+
 lines = open("2024/Inputs/input04.txt").read().splitlines()
 
 
@@ -30,3 +32,4 @@ for y in range(1, len(lines)-1):
           total += 1/2
       total //= 1
 print(int(total))
+print(time.time()-t)
