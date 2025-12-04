@@ -1,7 +1,10 @@
+import time
+
 lines  = open("Inputs/Advent_of_Code_01.txt").read().splitlines()
 
-total = 0
-total1 = 0
+t = time.time()
+total_1 = 0
+total_2 = 0
 pos = 50
 start = False
 for rotation in lines:
@@ -15,16 +18,17 @@ for rotation in lines:
             raise Exception
 
     if start and pos < 0:
-        total1 -= 1
+        total_2 -= 1
     if pos <= 0:
-        total1 += -((pos-1)//100)
+        total_2 += -((pos-1)//100)
     else:
-        total1 += pos//100
+        total_2 += pos//100
     pos = pos % 100
     start = False
     if not pos:
-        total += 1
+        total_1 += 1
         start = True
 
-print(total)
-print(total1)
+print(total_1)
+print(total_2)
+print(time.time()-t)

@@ -25,8 +25,6 @@ def solve(lines: list, n: int) -> int:
     return total
 
 
-
-
 if __name__ == "__main__":
     t = time.time()
     lines = [list(map(int, list(line))) for line in open("2025/Inputs/input03.txt").read().splitlines()]
@@ -35,4 +33,3 @@ if __name__ == "__main__":
     print(total_1)
     print(total_2)
     print(time.time()-t)
-
