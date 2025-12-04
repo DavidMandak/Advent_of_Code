@@ -1,4 +1,4 @@
-problems = open("../Inputs/Advent_of_Code_13.txt").read().split("\n\n")
+problems = open("2024/Inputs/input13.txt").read().split("\n\n")
 
 total = 0
 for problem in problems:

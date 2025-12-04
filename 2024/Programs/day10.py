@@ -1,5 +1,5 @@
 import copy
-lines = open("../Inputs/Advent_of_Code_10.txt").read().splitlines()
+lines = open("2024/Inputs/input10.txt").read().splitlines()
 
 
 def trail(x, y):

@@ -1,4 +1,4 @@
-schematics = open("../Inputs/Advent_of_Code_25.txt").read().split("\n\n")
+schematics = open("2024/Inputs/input25.txt").read().split("\n\n")
 
 def read(sch, char):
     heights = [5]*5

@@ -1,4 +1,4 @@
-lines = open("Advent_of_Code_10.txt").read().splitlines()
+lines = open("2023/Inputs/input10.txt").read().splitlines()
 positions = [[114, 36], [115, 35]]
 moves = ["R", "D"]
 loop = [[114, 35], [114, 36], [115, 35]]

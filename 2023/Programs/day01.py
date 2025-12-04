@@ -1,4 +1,4 @@
-lines = open("Advent_of_Code_1.txt").read().splitlines()
+lines = open("2023/Inputs/input01.txt").read().splitlines()
 first = None
 last = None
 final = 0

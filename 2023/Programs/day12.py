@@ -1,4 +1,4 @@
-lines = open("Advent_of_Code_12.txt").read().splitlines()
+lines = open("2023/Inputs/input12.txt").read().splitlines()
 springs = []
 records = []
 total = 0

@@ -1,6 +1,9 @@
 from collections import defaultdict
-lines = open("../Inputs/Advent_of_Code_01.txt").read().splitlines()
+import time
 
+lines = open("2024/Inputs/input01.txt").read().splitlines()
+
+t = time.time()
 line = lines[0].split("   ")
 left = [int(line[0])]
 right = [int(line[1])]
@@ -30,3 +33,4 @@ total = 0
 for num in left:
     total += num*left[num]*right[num]
 print(total)
+print(time.time()-t)

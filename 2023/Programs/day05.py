@@ -1,4 +1,4 @@
-lines = open("Advent_of_Code_5.txt").read().split("\n\n")
+lines = open("2023/Inputs/input05.txt").read().split("\n\n")
 lines[0] = lines[0].split(" ")
 lines[0].pop(0)
 seeds = []

@@ -1,5 +1,5 @@
 import copy
-warehouse, moves = open("../Inputs/Advent_of_Code_15.txt").read().split("\n\n")
+warehouse, moves = open("2024/Inputs/input15.txt").read().split("\n\n")
 warehouse = list(map(list, warehouse.splitlines()))
 save = copy.deepcopy(warehouse)
 moves = moves.replace("\n", "")

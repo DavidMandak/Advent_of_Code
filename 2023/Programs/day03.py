@@ -1,4 +1,4 @@
-lines = open("Advent_of_Code_3.txt").read().splitlines()
+lines = open("2023/Inputs/input03.txt").read().splitlines()
 check = False
 number = ""
 first_index = None

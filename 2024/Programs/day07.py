@@ -1,4 +1,4 @@
-lines = open("../Inputs/Advent_of_Code_07.txt").read().splitlines()
+lines = open("2024/Inputs/input07.txt").read().splitlines()
 
 
 def f(pos, value):

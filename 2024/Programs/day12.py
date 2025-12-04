@@ -1,4 +1,4 @@
-lines = open("../Inputs/Advent_of_Code_12.txt").read().splitlines()
+lines = open("2024/Inputs/input12.txt").read().splitlines()
 save = lines.copy()
 
 

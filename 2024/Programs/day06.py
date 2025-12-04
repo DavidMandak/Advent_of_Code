@@ -1,5 +1,5 @@
 from collections import defaultdict
-lines = open("../Inputs/Advent_of_Code_06.txt").read()
+lines = open("2024/Inputs/input06.txt").read()
 
 start_pos = lines.index("^")
 lines = lines.splitlines()

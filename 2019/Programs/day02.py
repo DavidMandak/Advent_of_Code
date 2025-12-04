@@ -1,5 +1,5 @@
 import Intcode
-program = list(map(int, open("../Inputs/Advent_of_Code_02.txt").read()[:-1].split(",")))
+program = list(map(int, open("2019/Inputs/input02.txt").read()[:-1].split(",")))
 program[1], program[2] = 12, 2
 save = program[:]
 

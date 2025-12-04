@@ -1,5 +1,5 @@
 import sys, copy
-lines = open("../Inputs/Advent_of_Code_18.txt").read().splitlines()
+lines = open("2024/Inputs/input18.txt").read().splitlines()
 sys.setrecursionlimit(10**6)
 
 size = 71

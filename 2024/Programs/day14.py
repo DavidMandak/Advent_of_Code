@@ -1,7 +1,7 @@
 import copy
 from PIL import Image
 
-lines = open("../Inputs/Advent_of_Code_14.txt").read().splitlines()
+lines = open("2024/Inputs/input14.txt").read().splitlines()
 
 total = 1
 map_size = (101, 103)

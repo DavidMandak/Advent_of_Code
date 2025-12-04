@@ -1,5 +1,5 @@
 from collections import defaultdict
-lines = open("../Inputs/Advent_of_Code_05.txt").read().split("\n\n")
+lines = open("2024/Inputs/input05.txt").read().split("\n\n")
 
 rules = defaultdict(list)
 pairs = lines[0].splitlines()

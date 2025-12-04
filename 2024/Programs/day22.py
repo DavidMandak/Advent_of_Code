@@ -1,5 +1,5 @@
 from collections import  defaultdict
-lines = list(map(int, open("../Inputs/Advent_of_Code_22.txt").read().splitlines()))
+lines = list(map(int, open("2024/Inputs/input22.txt").read().splitlines()))
 
 total = 0
 count = 0

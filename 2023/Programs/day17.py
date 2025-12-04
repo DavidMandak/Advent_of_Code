@@ -1,4 +1,4 @@
-lines = open("Advent_of_Code_17.txt").read().splitlines()
+lines = open("2023/Inputs/input17.txt").read().splitlines()
 lines1 = open("../test.txt").read().splitlines()
 values = []
 huh = []

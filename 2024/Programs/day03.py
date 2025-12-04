@@ -1,4 +1,4 @@
-lines = open("../Inputs/Advent_of_Code_03.txt").read().splitlines()
+lines = open("2024/Inputs/input03.txt").read().splitlines()
 
 total = 0
 for line in lines:

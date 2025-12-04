@@ -1,4 +1,4 @@
-lines = list(map(int, open("../Inputs/Advent_of_Code_01.txt").read().splitlines()))
+lines = list(map(int, open("2019/Inputs/input01.txt").read().splitlines()))
 
 total = 0
 for mass in lines:

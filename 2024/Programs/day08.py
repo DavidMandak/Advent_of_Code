@@ -1,5 +1,5 @@
 from collections import defaultdict
-lines = open("../Inputs/Advent_of_Code_08.txt").read().splitlines()
+lines = open("2024/Inputs/input08.txt").read().splitlines()
 save = lines.copy()
 
 antennas = defaultdict(list)

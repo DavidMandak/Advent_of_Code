@@ -1,6 +1,6 @@
 from collections import defaultdict
 
-towels, designs = open("../Inputs/Advent_of_Code_19.txt").read().split("\n\n")
+towels, designs = open("2024/Inputs/input19.txt").read().split("\n\n")
 towels = towels.split(", ")
 
 

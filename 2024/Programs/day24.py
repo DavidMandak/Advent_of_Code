@@ -1,4 +1,4 @@
-values, lines = open("../Inputs/Advent_of_Code_24.txt").read().split("\n\n")
+values, lines = open("2024/Inputs/input24.txt").read().split("\n\n")
 lines = [line.split() for line in lines.splitlines()]
 wires = {name:int(value) for name, value in [(start.split(": ")) for start in values.splitlines()]}
 

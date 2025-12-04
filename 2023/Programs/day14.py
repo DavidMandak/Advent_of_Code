@@ -1,4 +1,4 @@
-lines = open("Advent_of_Code_14.txt").read().splitlines()
+lines = open("2023/Inputs/input14.txt").read().splitlines()
 vertical_length = len(lines)
 horizontal_length = len(lines[0])
 totals = []

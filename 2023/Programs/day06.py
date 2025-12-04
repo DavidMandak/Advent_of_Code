@@ -1,4 +1,4 @@
-lines = open("Advent_of_Code_6.txt").read().splitlines()
+lines = open("2023/Inputs/input06.txt").read().splitlines()
 races = []
 total = 1
 time = int(lines[0])

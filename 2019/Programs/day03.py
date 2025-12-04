@@ -1,4 +1,4 @@
-first, second = [wire.split(",") for wire in open("../Inputs/Advent_of_Code_03.txt").read().replace("R", "1 0 ")
+first, second = [wire.split(",") for wire in open("2019/Inputs/input03.txt").read().replace("R", "1 0 ")
 .replace("L", "-1 0 ").replace("U", "0 -1 ").replace("D", "0 1 ").splitlines()]
 
 step_total, man_total = None, None

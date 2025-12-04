@@ -1,4 +1,4 @@
-line = open("../Inputs/Advent_of_Code_08.txt").read()[:-1]
+line = open("2019/Inputs/input08.txt").read()[:-1]
 
 size = 25*6
 layers = [line[i:i+size] for i in range(0, len(line), size)]

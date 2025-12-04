@@ -1,7 +1,7 @@
 import sys, copy
 
 sys.setrecursionlimit(10**6)
-lines = list(map(list, open("../Inputs/Advent_of_Code_16.txt").read().splitlines()))
+lines = list(map(list, open("2024/Inputs/input16.txt").read().splitlines()))
 save = copy.deepcopy(lines)
 
 

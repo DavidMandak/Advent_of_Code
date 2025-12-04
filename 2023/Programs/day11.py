@@ -1,4 +1,4 @@
-lines = open("Advent_of_Code_11.txt").read().splitlines()
+lines = open("2023/Inputs/input11.txt").read().splitlines()
 galaxies = []
 y_empty = []
 empty_line = 30

@@ -1,5 +1,5 @@
 from collections import defaultdict
-lines = [orbit.split(")") for orbit in open("../Inputs/Advent_of_Code_06.txt").read().splitlines()]
+lines = [orbit.split(")") for orbit in open("2019/Inputs/input06.txt").read().splitlines()]
 
 total = 0
 orbits = defaultdict(list)

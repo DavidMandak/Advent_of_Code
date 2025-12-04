@@ -1,5 +1,5 @@
 import sys, copy
-lines = open("../Inputs/Advent_of_Code_20.txt").read()
+lines = open("2024/Inputs/input20.txt").read()
 sys.setrecursionlimit(10**6)
 
 start_i = lines.index("S")

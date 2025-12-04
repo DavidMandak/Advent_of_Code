@@ -1,4 +1,4 @@
-patterns = open("Advent_of_Code_13.txt").read().split("\n\n")
+patterns = open("2023/Inputs/input13.txt").read().split("\n\n")
 vertical = 0
 horizontal = 0
 

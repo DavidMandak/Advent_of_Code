@@ -1,4 +1,4 @@
-strings = open("Advent_of_Code_15.txt").read().split(",")
+strings = open("2023/Inputs/input15.txt").read().split(",")
 boxes = {}
 total = 0
 current = 0

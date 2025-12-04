@@ -1,5 +1,5 @@
 from collections import defaultdict
-line = open("../Inputs/Advent_of_Code_11.txt").read().split()
+line = open("2024/Inputs/input11.txt").read().split()
 save = line.copy()
 
 total = len(line)

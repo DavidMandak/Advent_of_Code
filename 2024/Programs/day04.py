@@ -1,4 +1,4 @@
-lines = open("../Inputs/Advent_of_Code_04.txt").read().splitlines()
+lines = open("2024/Inputs/input04.txt").read().splitlines()
 
 
 def check(x, y, string):

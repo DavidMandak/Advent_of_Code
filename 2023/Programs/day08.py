@@ -1,5 +1,5 @@
 import re, math
-lines = open("Advent_of_Code_8.txt").read().splitlines()
+lines = open("2023/Inputs/input08.txt").read().splitlines()
 instructions = lines[0]
 nodes = {}
 for i in range(2, len(lines)):

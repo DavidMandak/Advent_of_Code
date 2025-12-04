@@ -1,4 +1,4 @@
-start, end = tuple(map(int, open("../Inputs/Advent_of_Code_04.txt").read()[:-1].split("-")))
+start, end = tuple(map(int, open("2019/Inputs/input04.txt").read()[:-1].split("-")))
 
 
 def create(num, prev, rank):

@@ -1,4 +1,4 @@
-registers, program = open("../Inputs/Advent_of_Code_17.txt").read().split("\n\n")
+registers, program = open("2024/Inputs/input17.txt").read().split("\n\n")
 registers = registers.splitlines()
 for i in range(3):
     registers[i] = int(registers[i].split(": ")[1])

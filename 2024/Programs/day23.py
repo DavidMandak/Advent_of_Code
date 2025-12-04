@@ -1,5 +1,5 @@
 from collections import defaultdict
-lines = open("../Inputs/Advent_of_Code_23.txt").read().splitlines()
+lines = open("2024/Inputs/input23.txt").read().splitlines()
 
 total = 0
 neighbours = defaultdict(list)

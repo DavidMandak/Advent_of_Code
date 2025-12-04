@@ -1,5 +1,5 @@
 import re
-lines = open("Advent_of_Code_4.txt").read().splitlines()
+lines = open("2023/Inputs/input04.txt").read().splitlines()
 points = 0
 total = 0
 index = 0

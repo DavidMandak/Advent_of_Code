@@ -1,4 +1,4 @@
-lines = open("Advent_of_Code_16.txt").read().splitlines()
+lines = open("2023/Inputs/input16.txt").read().splitlines()
 energy_map = []
 total = 0
 most = 0

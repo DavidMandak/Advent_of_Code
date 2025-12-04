@@ -1,5 +1,5 @@
 import re
-lines = open("Advent_of_Code_2.txt").read().splitlines()
+lines = open("2023/Inputs/input02.txt").read().splitlines()
 total = 0
 for line in lines:
     red = 0

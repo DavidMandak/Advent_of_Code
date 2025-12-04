@@ -1,4 +1,4 @@
-lines = open("Advent_of_Code_7.txt").read().splitlines()
+lines = open("2023/Inputs/input07.txt").read().splitlines()
 quintuplet_hand, quintuplet_bid = [], []
 quadruplet_hand, quadruplet_bid = [], []
 full_house_hand, full_house_bid = [], []

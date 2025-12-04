@@ -1,4 +1,4 @@
-lines = open("Advent_of_Code_9.txt").read().splitlines()
+lines = open("2023/Inputs/input09.txt").read().splitlines()
 total = 0
 for i in range(0, len(lines)):
     lines[i] = lines[i].split(" ")
