@@ -22,13 +22,9 @@ for r in ranges:
 
             if s < sf:
                 if e >= sf:
-                    if e <= ef:
-                        e = sf-1
-                    else:
-                        e = sf-1
-                        r.append(ef+1, e)
-                else:
-                    pass
+                    if e > ef:
+                        r.append((ef+1, e))
+                    e = sf-1
             else:
                 if s <= ef:
                     if e > ef:
@@ -36,12 +32,10 @@ for r in ranges:
                     else:
                         s = None
                         break
-                else:
-                    pass
 
-            if s is not None:
-                fresh.append(s, e)
-                            
+        if s is not None:
+            fresh.append((s, e))
+
 for sf, ef in fresh:
     total_2 += ef-sf+1
 
