@@ -2,8 +2,10 @@ import sys
 import time
 
 def main() -> tuple:
-    return solve_1(), solve_2()
+    total_1 = solve_1()
+    total_2 = solve_2()
 
+    return total_1, total_2
 
 def setup_1() -> tuple:
     sys.stdin = open("2025/Inputs/input06.txt")
