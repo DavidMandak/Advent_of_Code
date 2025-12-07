@@ -3,6 +3,8 @@ from collections import deque
 
 
 def main():
+    file = open("2025/Inputs/input07.txt").read().splitlines()
+
     lines = setup(file)
     total_1 = solve_1(lines)
     total_2 = solve_2(lines)
@@ -11,7 +13,6 @@ def main():
 
 
 def setup(file: list) -> list:
-    file = open("2025/Inputs/input07.txt").read().splitlines()
 
     lines = []
     for i in range(0, len(file), 2):
