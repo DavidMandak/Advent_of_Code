@@ -13,7 +13,6 @@ def main():
 
 
 def setup(file: list) -> list:
-
     lines = []
     for i in range(0, len(file), 2):
         lines.append(file[i])
