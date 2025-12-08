@@ -7,10 +7,9 @@ def main():
     t = time.time()
 
     heap = find_lengths(coordinates)
-    circuits = solve_1(heap.copy(), len(coordinates))
+    circuits, answer = list(solve_2(heap, len(coordinates)))
+    
     total_1 = final_1(circuits)
-
-    answer = solve_2(heap, len(coordinates))
     total_2 = final_2(coordinates, answer)
     
     print(total_1)
@@ -30,56 +29,6 @@ def find_lengths(coordinates: list) -> list:
     return heap
 
 
-def solve_1(heap: list, size: int) -> list:
-    circuits = []
-    boxes = [None]*size
-    for _ in range(10**3):
-        d, i, j = heapq.heappop(heap)
-        circuit_i = boxes[i]
-        circuit_j = boxes[j]
-
-        if circuit_i is None:
-            if circuit_j is None:
-                boxes[i] = boxes[j] = len(circuits)
-                circuits.append(2)
-
-            else:
-                boxes[i] = circuit_j
-                circuits[circuit_j] += 1
-
-        else:
-            if circuit_j is None:
-                boxes[j] = circuit_i
-                circuits[circuit_i] += 1
-
-            else:
-                if circuit_j != circuit_i:
-                    length_i, length_j = circuits[circuit_i], circuits[circuit_j]
-
-                    if  length_i <= length_j:
-                        length = length_i
-                        circuit = circuit_i
-                        change = circuit_j
-                        circuits[circuit_j] += length_i
-                        circuits[circuit_i] = 0
-                    else:
-                        length = length_j
-                        circuit = circuit_j
-                        change = circuit_i
-                        circuits[circuit_i] += length_j
-                        circuits[circuit_j] = 0
-                    
-                    found = 0
-                    k = 0
-                    while found < length:
-                        if boxes[k] == circuit:
-                            boxes[k] = change
-                            found += 1
-                        k += 1
-
-    return circuits
-
-
 def final_1(circuits: list) -> int:
     high = [0]*3
     for cir in circuits:
@@ -95,12 +44,14 @@ def final_1(circuits: list) -> int:
     return total_1
 
 
-def solve_2(heap:list, size: int) -> tuple:
+def solve_2(heap:list, size: int):
     amount = size
     circuits = []
     boxes = [None]*size
-    i = 0
+    count = 0
     while amount > 1:
+        if count == 10**3:
+            yield circuits.copy()
         d, i, j = heapq.heappop(heap)
         circuit_i = boxes[i]
         circuit_j = boxes[j]
@@ -146,13 +97,16 @@ def solve_2(heap:list, size: int) -> tuple:
                         k += 1
                 else:
                     amount += 1
+
+        count += 1
     
-    return i, j
+    yield i, j
     
     
 def final_2(coordinates: list, answer: tuple) -> int:
     i, j = answer
     total_2 = coordinates[i][0]*coordinates[j][0]
+
     return total_2
 
 
