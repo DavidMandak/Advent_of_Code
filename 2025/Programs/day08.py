@@ -14,7 +14,7 @@ def main():
     total_2 = final_2(coordinates, answer)
     
     print(total_1)
-    prnit(total_2)
+    print(total_2)
     print(time.time()-t)
 
 
@@ -77,24 +77,6 @@ def solve_1(heap: list, size: int) -> list:
                             found += 1
                         k += 1
 
-                    #length_i, length_j = circuits[circuit_i], circuits[circuit_j]
-#
-                    #if length_i > length_j:
-                    #    length_i = length_j
-                    #    temp = circuit_i
-                    #    circuit_i = circuit_j
-                    #    circuit_j = temp
-                    #
-                    #circuits[circuit_j] += length_i
-                    #circuits[circuit_i] = 0
-                    #found = 0
-                    #k = 0
-                    #while found < length_i:
-                    #    if boxes[k] == circuit_i:
-                    #        boxes[k] = circuit_j
-                    #        found += 1
-                    #    k += 1
-
     return circuits
 
 
@@ -118,7 +100,7 @@ def solve_2(heap:list, size: int) -> tuple:
     circuits = []
     boxes = [None]*size
     i = 0
-    while size > 1:
+    while amount > 1:
         d, i, j = heapq.heappop(heap)
         circuit_i = boxes[i]
         circuit_j = boxes[j]
