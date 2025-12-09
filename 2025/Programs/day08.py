@@ -24,7 +24,7 @@ def find_lengths(coordinates: list) -> list:
         x, y, z = coordinates[i]
         for j in range(i+1, size):
             a, b, circuit = coordinates[j]
-            heapq.heappush(heap, (((x-a)**2+(y-b)**2+(z-circuit)**2)**(1/2), i, j))
+            heapq.heappush(heap, ((x-a)**2+(y-b)**2+(z-circuit)**2, i, j))
 
     return heap
 
