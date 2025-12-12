@@ -10,7 +10,7 @@ def main() -> None:
     total_1 = solve_1(nodes_1)
 
     nodes_2 = setup_2(lines)
-    total_2 = solve_2(nodes_1)
+    total_2 = solve_2(nodes_1, len(lines))
 
     print(total_1)
     print(total_2)
@@ -47,19 +47,18 @@ def setup_2(lines: list) -> dict:
     return nodes
 
 
-def solve_2(nodes: dict) -> int:
-    total_2 = dfs_2("svr", nodes, False)
+def solve_2(nodes: dict, length: int) -> int:
+    total_2 = dfs_2("svr", nodes, [0]*length)
 
 
-def dfs_2(curr: str, nodes: dict, dac: bool) -> int:
-    if curr == "dac":
-        if dac:
-            raise Exception
-        dac = True
+def dfs_2(curr: str, nodes: dict, visited: list) -> int:
+    if curr in visited:
+        raise Exception
     elif curr == "out":
         return 0
     
-    return sum([dfs_2(node, nodes, dac) for node in nodes[curr]])
+    visited.append(curr)
+    return sum([dfs_2(node, nodes, visited.copy()) for node in nodes[curr]])
 
 
 
