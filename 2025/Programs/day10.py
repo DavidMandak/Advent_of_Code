@@ -50,38 +50,59 @@ def press_1(pattern: set, button: list) -> list:
 
 def solve_2(lines: list) -> int:
     total_2 = 0
+    total_2_bfs = 0
     for line in lines:
+        print("ok")
         lights = line[0].strip("[]")
         lights = {i for i in range(len(lights)) if lights[i] == "#"}
         buttons = [list(map(int, button[1:-1].split(","))) for button in line[1:-1]]
+        buttons = [button[1] for button in sorted(zip(list(map(len, buttons)), buttons))]
         joltage = list(map(int, line[-1][1:-1].split(",")))
 
-        total_2 += dfs([0]*len(joltage), joltage, buttons, 0)
+        total_2 += dfs([0]*len(joltage), joltage, buttons, 0, len(buttons)-1)
+        #total_2_bfs += bfs(joltage, buttons)
 
     return total_2
 
 
-
-def dfs(counters: list, joltage: list, buttons: list, clicks: int) -> int:
+def dfs(counters: list, joltage: list, buttons: list, clicks: int, curr: int) -> int:
     if counters == joltage:
         return clicks
     
-    low = float("inf")
-    for button in buttons:
-        check = press_2(counters.copy(), button, joltage)
+    for i in range(curr, -1, -1):
+        button = buttons[i]
+        check = press_2(counters.copy(), joltage, button)
         if check:
-            n = dfs(check, joltage, buttons, clicks+1)
-            if n < low:
-                low = n
+            n = dfs(check, joltage, buttons, clicks+1, i)
+            if n:
+                return n
     
-    return low
+    return 0
+
+
+def bfs(joltage: list, buttons: list) -> int:
+    bfs = deque([([0]*len(joltage), 0, len(buttons)-1)])
+    while bfs:
+        counters, clicks, curr = bfs.pop()
+
+        if counters == joltage:
+            return clicks
         
-        
-def press_2(counters: list, button: list, joltage: list) -> bool:
+        for i in range(curr, -1, -1):
+            button = buttons[i]
+            check = press_2(counters.copy(), joltage, button)
+            if check:
+                bfs.appendleft((check, clicks+1, i))
+    
+    raise Exception
+
+
+def press_2(counters: list, joltage: list, button: str) -> str:
     for pos in button:
         if counters[pos] == joltage[pos]:
             return []
         counters[pos] += 1
+
     return counters
 
 
