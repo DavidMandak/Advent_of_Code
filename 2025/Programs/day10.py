@@ -50,19 +50,37 @@ def press_1(pattern: set, button: list) -> list:
 
 def solve_2(lines: list) -> int:
     total_2 = 0
-    total_2_bfs = 0
     for line in lines:
-        print("ok")
         lights = line[0].strip("[]")
         lights = {i for i in range(len(lights)) if lights[i] == "#"}
         buttons = [list(map(int, button[1:-1].split(","))) for button in line[1:-1]]
         buttons = [button[1] for button in sorted(zip(list(map(len, buttons)), buttons))]
         joltage = list(map(int, line[-1][1:-1].split(",")))
 
-        total_2 += dfs([0]*len(joltage), joltage, buttons, 0, len(buttons)-1)
-        #total_2_bfs += bfs(joltage, buttons)
+        total_2 = s(joltage, buttons)
+        #total_2 += dfs([0]*len(joltage), joltage, buttons, 0, len(buttons)-1)
+        #total_2 += bfs(joltage, buttons)
 
     return total_2
+
+
+def s(joltage: list, buttons: list) -> int:
+    total_2 = 0
+    length = len(joltage)
+    buttons_pos = [[] for _ in range(length)]
+
+    for _ in range(length):
+        amount = min(joltage)
+        pos = joltage.index(amount)
+        joltage[pos] = float("inf")
+
+        for i in range(len(buttons)-1, -1, -1):
+            if pos in buttons[i]:
+                buttons_pos[pos].append(buttons[i])
+
+    stack = []
+    print(buttons_pos)
+    return total_2      
 
 
 def dfs(counters: list, joltage: list, buttons: list, clicks: int, curr: int) -> int:
