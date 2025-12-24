@@ -36,5 +36,5 @@ for time in range(52, 10**4, 101):
         graph[final_pos[1]*map_size[0]+final_pos[0]] = 0
     output = Image.new("L", (map_size[0], map_size[1]))
     output.putdata(graph)
-    output.save("Advent_of_Code_14_images/AoC_"+str(time)+".jpg")
+    output.save("2024/Day14_Images/AoC_"+str(time)+".jpg")
 print(time.time()-t)
